@@ -26,10 +26,10 @@ fi
 #Unmuting Pulseaudio and Alsa and Setting Sound to Maximum
 amixer sset Master unmute 1>/dev/null
 amixer sset Master 100% 1>/dev/null
-sudo -u tux amixer -D pulse sset Master unmute 1>/dev/null
-sudo -u tux amixer -D pulse sset Master 100% 1>/dev/null
+sudo -u $USER amixer -D pulse sset Master unmute 1>/dev/null
+sudo -u $USER amixer -D pulse sset Master 100% 1>/dev/null
 
 #Playing the Alert
 while true; do
-sudo -u tux paplay $s_file
+sudo -u $USER paplay $s_file
 done
